@@ -13,7 +13,7 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>com.substring.chat</groupId>
+	<groupId>com.subsstring.chat</groupId>
 	<artifactId>chat-app-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>chat-app-backend</name>
