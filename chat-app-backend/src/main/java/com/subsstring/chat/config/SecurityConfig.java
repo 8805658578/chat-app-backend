@@ -12,12 +12,12 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
         http
-                .csrf(csrf -> csrf.disable())   // disable csrf for websocket
-                .cors(cors -> {})               // enable cors
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/chat/**").permitAll()  // allow websocket
-                        .anyRequest().permitAll()
-                );
+            .csrf(csrf -> csrf.disable())   // VERY IMPORTANT
+            .cors(cors -> {})               // enable CORS
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/chat/**").permitAll()  // allow websocket
+                .anyRequest().permitAll()
+            );
 
         return http.build();
     }
