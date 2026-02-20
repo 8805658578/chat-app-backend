@@ -21,13 +21,12 @@ public class WebsocketConfig implements WebSocketMessageBrokerConfigurer {
         config.setApplicationDestinationPrefixes("/app");
     }
 
-    @Override
+   @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        //connection Occer
-        registry.addEndpoint("/chat")
-                .setAllowedOriginPatterns("*")
-                .withSockJS();
-    }
+    registry.addEndpoint("/chat")
+            .setAllowedOriginPatterns("*")
+            .withSockJS();
+}
 
 
 }
